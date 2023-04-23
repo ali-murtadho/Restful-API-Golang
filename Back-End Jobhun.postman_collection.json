@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "ca6ce4e5-1f29-4911-b974-b0493f963a1d",
+		"name": "Back-End Jobhun",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20165513"
+	},
+	"item": [
+		{
+			"name": "Lihat Data Hobi",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pastikan response memiliki status code 200.\r",
+							"pm.test('response status code should have 200 value', () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"}); \r",
+							"\r",
+							"// Pastikan header response Content-Type memiliki nilai application/json.\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan object.\r",
+							"pm.test('response body should be an object', () => {\r",
+							"   const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan array.\r",
+							"pm.test(\"Response is an array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/hobi",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hobi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lihat Data Jurusan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pastikan response memiliki status code 200.\r",
+							"pm.test('response status code should have 200 value', () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"}); \r",
+							"\r",
+							"// Pastikan header response Content-Type memiliki nilai application/json.\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan object.\r",
+							"pm.test('response body should be an object', () => {\r",
+							"   const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan array.\r",
+							"pm.test(\"Response is an array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/jurusan",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jurusan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lihat Data Mahasiswa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pastikan response memiliki status code 200.\r",
+							"pm.test('response status code should have 200 value', () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"}); \r",
+							"\r",
+							"// Pastikan header response Content-Type memiliki nilai application/json.\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan object.\r",
+							"pm.test('response body should be an object', () => {\r",
+							"   const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan array.\r",
+							"pm.test(\"Response is an array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mahasiswa/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mahasiswa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ubah Mahasiswa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pastikan response memiliki status code 201.\r",
+							"pm.test('response status code should have 201 value', () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"}); \r",
+							"\r",
+							"// Pastikan header response Content-Type memiliki nilai application/json.\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan object.\r",
+							"pm.test('response body should be an object', () => {\r",
+							"   const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan array.\r",
+							"pm.test(\"Response is an array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nama\": \"Ali Murtadho\",\r\n        \"usia\": 21,\r\n        \"gender\": 0,\r\n        \"id_hobi\": 5,\r\n        \"id_jurusan\": 5\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mahasiswa/9/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mahasiswa",
+						"9",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tambah Mahasiswa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pastikan response memiliki status code 200.\r",
+							"pm.test('response status code should have 200 value', () => {\r",
+							"  pm.response.to.have.status(200);\r",
+							"}); \r",
+							"\r",
+							"// Pastikan header response Content-Type memiliki nilai application/json.\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan object.\r",
+							"pm.test('response body should be an object', () => {\r",
+							"   const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan array.\r",
+							"pm.test(\"Response is an array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nama\": \"Ali M\",\r\n        \"usia\": 20,\r\n        \"gender\": 0,\r\n        \"id_hobi\": 5,\r\n        \"id_jurusan\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/mahasiswa/insert",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mahasiswa",
+						"insert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hapus Mahasiswa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Pastikan response memiliki status code 201.\r",
+							"pm.test('response status code should have 201 value', () => {\r",
+							"  pm.response.to.have.status(201);\r",
+							"}); \r",
+							"\r",
+							"// Pastikan header response Content-Type memiliki nilai application/json.\r",
+							"pm.test('response Content-Type header should have application/json value', () => {\r",
+							"   pm.expect(pm.response.headers.get('Content-Type')).to.equals('application/json');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan object.\r",
+							"pm.test('response body should be an object', () => {\r",
+							"   const responseJson = pm.response.json();\r",
+							"   pm.expect(responseJson).to.be.an('object');\r",
+							"});\r",
+							"\r",
+							"// Pastikan body response merupakan array.\r",
+							"pm.test(\"Response is an array\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.be.an('array');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/mahasiswa/16/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mahasiswa",
+						"16",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
